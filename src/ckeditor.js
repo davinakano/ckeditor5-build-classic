@@ -30,6 +30,9 @@ import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
 
+// Custom plugins
+import InsertImageFromURL from './customPlugins/insertImageFromURL';
+
 export default class ClassicEditor extends ClassicEditorBase {}
 
 // Plugins to include in the build.
@@ -56,7 +59,10 @@ ClassicEditor.builtinPlugins = [
 	PasteFromOffice,
 	Table,
 	TableToolbar,
-	TextTransformation
+	TextTransformation,
+
+	// From here, these are all custom plugins
+	InsertImageFromURL
 ];
 
 // Editor configuration.
@@ -74,7 +80,7 @@ ClassicEditor.defaultConfig = {
 			'indent',
 			'outdent',
 			'|',
-			'imageUpload',
+			'insertImageFromURL',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
