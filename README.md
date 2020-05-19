@@ -44,6 +44,48 @@ import CKEditorReach from 'ckeditor5-custom-build-reach';
 />
 ```
 
+## Development
+
+Clone the repo and run
+
+```bash
+npm install
+```
+
+Add a new file with your plugin to the folder `src/customPlugins` and update `src/ckeditor.js` to include your plugin:
+
+```code
+// src/ckeditor.js
+// ...
+
+// Custom plugins
+import InsertImageFromURL from './customPlugins/insertImageFromURL';
+import MyNewFancyPlugin from './customPlugins/myNewFancyPlugin';
+
+ClassicEditor.builtinPlugins = [
+  // ...
+
+  // From here, these are all custom plugins
+  InsertImageFromURL,
+  MyNewFancyPlugin
+];
+
+ClassicEditor.defaultConfig = {
+  toolbar: {
+    items: [
+      // ...
+      
+      'insertImageFromURL',
+
+      // This name has to be the same as the first parameter
+      // of the call to editor.ui.componentFactory.add('<ADD_NAME_HERE>')
+      // in ./customPlugins/myNewFancyPlugin.js
+      'myNewFancyPlugin',
+    ]
+  }
+}
+```
+
 ## License (imported from the original repo)
 
 Licensed under the terms of [GNU General Public License Version 2 or later](http://www.gnu.org/licenses/gpl.html). For full details about the license, please check the `LICENSE.md` file or [https://ckeditor.com/legal/ckeditor-oss-license](https://ckeditor.com/legal/ckeditor-oss-license).
