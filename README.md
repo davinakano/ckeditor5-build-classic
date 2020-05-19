@@ -1,8 +1,12 @@
 # ckeditor5-custom-build-reach
 
+See it live [here](https://ckeditor5-custom-build-reach.netlify.app/).
+
 This is a custom build of CKEditor 5 based off of the [Classic Editor](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/overview.html#classic-editor). It is meant to use paired with the [official React component](https://ckeditor.com/docs/ckeditor5/latest/builds/guides/integration/frameworks/react.html).
 
 The [original documentation](https://ckeditor.com/docs/ckeditor5/latest/examples/builds/classic-editor.html) stands true for the most part. For the part that it differs, it will be highlighted in this README.
+
+- Added custom plugin / toolbar button for handling images from URL. It uses a `prompt()` as an input for the image URL.
 
 --
 
