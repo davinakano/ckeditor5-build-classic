@@ -14,13 +14,11 @@ import Italic from '@ckeditor/ckeditor5-basic-styles/src/italic';
 import BlockQuote from '@ckeditor/ckeditor5-block-quote/src/blockquote';
 import CKFinder from '@ckeditor/ckeditor5-ckfinder/src/ckfinder';
 import EasyImage from '@ckeditor/ckeditor5-easy-image/src/easyimage';
-import Heading from '@ckeditor/ckeditor5-heading/src/heading';
 import Image from '@ckeditor/ckeditor5-image/src/image';
 import ImageCaption from '@ckeditor/ckeditor5-image/src/imagecaption';
 import ImageStyle from '@ckeditor/ckeditor5-image/src/imagestyle';
 import ImageToolbar from '@ckeditor/ckeditor5-image/src/imagetoolbar';
 import ImageUpload from '@ckeditor/ckeditor5-image/src/imageupload';
-import Indent from '@ckeditor/ckeditor5-indent/src/indent';
 import Link from '@ckeditor/ckeditor5-link/src/link';
 import List from '@ckeditor/ckeditor5-list/src/list';
 import MediaEmbed from '@ckeditor/ckeditor5-media-embed/src/mediaembed';
@@ -29,6 +27,7 @@ import PasteFromOffice from '@ckeditor/ckeditor5-paste-from-office/src/pastefrom
 import Table from '@ckeditor/ckeditor5-table/src/table';
 import TableToolbar from '@ckeditor/ckeditor5-table/src/tabletoolbar';
 import TextTransformation from '@ckeditor/ckeditor5-typing/src/texttransformation';
+import Font from '@ckeditor/ckeditor5-font/src/font';
 
 // Custom plugins
 import InsertImageFromURL from './customPlugins/insertImageFromURL';
@@ -45,13 +44,11 @@ ClassicEditor.builtinPlugins = [
 	BlockQuote,
 	CKFinder,
 	EasyImage,
-	Heading,
 	Image,
 	ImageCaption,
 	ImageStyle,
 	ImageToolbar,
 	ImageUpload,
-	Indent,
 	Link,
 	List,
 	MediaEmbed,
@@ -60,6 +57,7 @@ ClassicEditor.builtinPlugins = [
 	Table,
 	TableToolbar,
 	TextTransformation,
+	Font,
 
 	// From here, these are all custom plugins
 	InsertImageFromURL
@@ -69,21 +67,22 @@ ClassicEditor.builtinPlugins = [
 ClassicEditor.defaultConfig = {
 	toolbar: {
 		items: [
-			'heading',
-			'|',
+			'fontSize',
+			'fontFamily',
 			'bold',
 			'italic',
 			'link',
+			'fontColor',
+			'fontBackgroundColor',
+			'|',
 			'bulletedList',
 			'numberedList',
-			'|',
-			'indent',
-			'outdent',
 			'|',
 			'insertImageFromURL',
 			'blockQuote',
 			'insertTable',
 			'mediaEmbed',
+			'|',
 			'undo',
 			'redo'
 		]
