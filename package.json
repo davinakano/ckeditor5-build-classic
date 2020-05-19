@@ -1,6 +1,6 @@
 {
   "name": "ckeditor5-custom-build-reach",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "description": "A custom build on top of the classic editor of CKEditor 5.",
   "keywords": [
     "ckeditor5-build",
